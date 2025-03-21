@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Harmony - Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background-animation">
+        <div class="starfield">
+            <div class="starfield-layer-1"></div>
+            <div class="starfield-layer-2"></div>
+            <div class="starfield-layer-3"></div>
+        </div>
+        <div class="wave-container">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </div>
+    <div id="particles"></div>
+    <div class="container mt-5 pt-5">
+        <div class="card p-4 complaint-card">
+            <h1 class="card-title">Feedback</h1>
+            <h2 class="card-title" style="font-size: 1.5rem;">Rate Issue Resolution</h2>
+            <form id="feedback-form">
+                <div class="form-group">
+                    <select class="form-control" id="feedback-complaint" required>
+                        <option value="" disabled selected>Select Complaint</option>
+                    </select>
+                    <label for="feedback-complaint" class="form-label">Select Complaint</label>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="rating" required>
+                        <option value="" disabled selected>Select Rating</option>
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                    <label for="rating" class="form-label">Rating</label>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="feedback-comment" rows="3" placeholder=" "></textarea>
+                    <label for="feedback-comment" class="form-label">Comments (Optional)</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit Feedback</button>
+            </form>
+            <h2 class="card-title mt-5" style="font-size: 1.5rem;">Suggestions for Improvement</h2>
+            <form id="suggestion-form">
+                <div class="form-group">
+                    <textarea class="form-control" id="suggestion" rows="3" placeholder=" " required></textarea>
+                    <label for="suggestion" class="form-label">Your Suggestion</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit Suggestion</button>
+            </form>
+            <h3 class="mt-4" style="font-size: 1.25rem; font-weight: 500;">Previous Feedback & Suggestions</h3>
+            <ul class="list-group" id="feedback-list"></ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="navbar.js"></script>
+    <script src="feedback.js"></script>
+</body>
+</html>
